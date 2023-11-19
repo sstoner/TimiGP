@@ -119,12 +119,12 @@ TimiCellNetwork<-  function(resdata = NULL,
       stop('No Cell Type were found in given group')
     }
     
-    if(sum(unique(geneset[,1]) %in% cell) == 0) {
+    if(sum(unique(geneset$CellType) %in% cell) == 0) {
       stop('No Cell Type were found in given geneset')
     }
     
     att <- data.frame(row.names =cell,group=group[as.character(cell)])
-    node <- table(geneset[1]) %>% 
+    node <- table(geneset$CellType) %>% 
       data.frame(row.names = 1) %>% merge(att,by=0) 
     names(node) <- c("Key", "No.Markers", "Group")
 
