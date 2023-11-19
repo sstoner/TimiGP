@@ -198,8 +198,8 @@ TimiCellPair <- function(geneset = NULL,
 
     ann_i <- unlist(strsplit(ann_int[i], "_"))
     
-    se1 <- which(set[, 1]==ann_i[1])
-    se2 <- which(set[, 1]==ann_i[2])
+    se1 <- which(set$CellType==ann_i[1])
+    se2 <- which(set$CellType==ann_i[2])
     
     xx1 <- set[se1, 2]
     xx2 <- set[se2, 2]
