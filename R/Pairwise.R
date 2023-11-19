@@ -201,8 +201,8 @@ TimiCellPair <- function(geneset = NULL,
     se1 <- which(set$CellType==ann_i[1])
     se2 <- which(set$CellType==ann_i[2])
     
-    xx1 <- set[se1, 2]
-    xx2 <- set[se2, 2]
+    xx1 <- set$Gene[se1]
+    xx2 <- set$Gene[se2]
     
     xx <- outer(xx1, xx2, paste, sep="_")
     nn <- length(xx)
