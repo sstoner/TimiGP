@@ -181,7 +181,7 @@ TimiCellPair <- function(geneset = NULL,
   
   
   # Cell Pair ------------------------------------------------------------------
-  ann <- unique(set[, 1])
+  ann <- unique(set$CellType)
   if(length(ann) <=1){
     stop('Less than 2 cell types were found.')
   }
