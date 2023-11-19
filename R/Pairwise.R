@@ -164,7 +164,7 @@ TimiCellPair <- function(geneset = NULL,
     }
     
     if (!is.null(dataset)) {
-      se <- which(geneset[,3] %in% dataset)
+      se <- which(geneset$Dataset %in% dataset)
       if (length(se) == 0){
         stop('Given dataset is different from 3rd column of geneset.')
       } else{
