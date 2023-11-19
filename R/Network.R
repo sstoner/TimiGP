@@ -521,7 +521,7 @@ TimiGeneNetwork<-  function(resdata = NULL,
     if(sum(unique(geneset$Gene) %in% selected) == 0) {
       stop('No Gene were found in given geneset')
     } else{
-      se <- which(geneset[,2] %in% selected)
+      se <- which(geneset$Gene %in% selected)
       node <- geneset[se,]
     }
     
